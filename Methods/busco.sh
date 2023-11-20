@@ -36,8 +36,7 @@ conda info
 mkdir ../Material/Busco
 for file in ../Material/Prediction/*.aa
 do
-    busco -m proteins -i $file -o ../Material/Busco
+    busco -m proteins -i "$file" -o ../Material/Busco
 done
-
 
 exit 0
