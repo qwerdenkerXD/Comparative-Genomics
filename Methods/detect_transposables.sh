@@ -38,8 +38,9 @@ do
     
     out_dir="../Material/Detected_Transposons/$genome_id"
     mkdir "$out_dir"
-    cp "$dir/$genome_id*" $out_dir
-    perl /opt/edta/EDTA/EDTA.pl --genome "$out_dir/$genome_id*"
+    file=($dir/$genome_id*)
+    cp "${file[0]}" $out_dir
+    perl /opt/edta/EDTA/EDTA.pl --genome "$out_dir/${file[0]##*/}"
 done
 
 exit 0
