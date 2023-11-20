@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 # name
-#SBATCH --job-name=predict_genes
+#SBATCH --job-name=busco
 
 # cpu
 #SBATCH --ntasks=80
