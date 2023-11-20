@@ -1,10 +1,16 @@
 *
 
 !.gitignore
+
 !Methods
 !Methods/*.sh
+
+!Methods/logs
+!Methods/logs/._
+
 !Material
 !Material/._
+
 !Results
 !Results/._
 
