@@ -1,0 +1,11 @@
+*
+
+!.gitignore
+!Methods
+!Methods/*
+!Material
+!Material/._
+!Results
+!Results/._
+
+!README.md
