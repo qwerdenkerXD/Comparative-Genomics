@@ -6,7 +6,7 @@
 # cpu
 #SBATCH --ntasks=1
 
-#SBATCH --mem-per-cpu=1MB
+#SBATCH --mem-per-cpu=16GB
 
 #SBATCH --output=%x_%j_slurm.out
 #SBATCH --error=%x_%j_slurm.err
