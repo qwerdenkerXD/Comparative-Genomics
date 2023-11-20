@@ -8,8 +8,8 @@
 
 #SBATCH --mem-per-cpu=16GB
 
-#SBATCH --output=%x_%j_slurm.out
-#SBATCH --error=%x_%j_slurm.err
+#SBATCH --output=./logs/%x_%j_slurm.out
+#SBATCH --error=./logs/%x_%j_slurm.err
 
 cd ../Material
 mkdir Prediction

@@ -8,8 +8,8 @@
 
 #SBATCH --mem-per-cpu=1GB
 
-#SBATCH --output=%x_%j_slurm.out
-#SBATCH --error=%x_%j_slurm.err
+#SBATCH --output=./logs/%x_%j_slurm.out
+#SBATCH --error=./logs/%x_%j_slurm.err
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -29,6 +29,7 @@ unset __conda_setup
 # activate EDTA conda environment:
 conda activate EDTA
 
+methods_dir="$(pwd)"
 mkdir ../Material/Detected_Transposons
 for dir in ../Material/Genomes/ncbi_dataset/data/*/
 do
@@ -40,7 +41,9 @@ do
     mkdir "$out_dir"
     file=($dir/$genome_id*)
     cp "${file[0]}" $out_dir
-    perl /opt/edta/EDTA/EDTA.pl --genome "$out_dir/${file[0]##*/}"
+    cd $out_dir
+    perl /opt/edta/EDTA/EDTA.pl --genome "./${file[0]##*/}"
+    cd $methods_dir
 done
 
 exit 0

@@ -8,8 +8,8 @@
 
 #SBATCH --mem-per-cpu=1GB
 
-#SBATCH --output=%x_%j_slurm.out
-#SBATCH --error=%x_%j_slurm.err
+#SBATCH --output=./logs/%x_%j_slurm.out
+#SBATCH --error=./logs/%x_%j_slurm.err
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

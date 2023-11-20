@@ -23,8 +23,8 @@
 # Define custom output and error files:
 # See
 # https://unix.stackexchange.com/questions/285690/slurm-custom-standard-output-name
-#SBATCH --output=%x_%j_slurm.out
-#SBATCH --error=%x_%j_slurm.err
+#SBATCH --output=./logs/%x_%j_slurm.out
+#SBATCH --error=./logs/%x_%j_slurm.err
 
 # This is where the actual work is done. In this case, the script only waits.
 # The time command is optional, but it may give you a hint on how long the
