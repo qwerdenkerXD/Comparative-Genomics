@@ -62,3 +62,10 @@ Ausführung des Skripts am 20. November 2023
 cd Methods
 bash compare_prediction_results.sh
 ```
+
+### Qualitätscheck mit BUSCO
+```sh
+cd Methods
+sbatch busco.sh
+```
+Ausführung des Skripts am 20. November 2023
