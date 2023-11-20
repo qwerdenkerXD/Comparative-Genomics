@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 # name
-#SBATCH --job-name=download_genome_data
+#SBATCH --job-name=predict_genes
 
 # cpu
 #SBATCH --ntasks=1
@@ -28,7 +28,7 @@ do
     dir=${dir%*/}  # remove trailing slash
     genome_id=${dir##*/}
     species_name=$(head -1 $dir/$genome_id* | cut -f 2,3 -d " ")
-    augustus --species='${species[$species_name]}' $dir/$genome_id* > "Prediction/${genome_id}_${species_name}.gff"
+    augustus --species="${species[$species_name]}" $dir/$genome_id* > "Prediction/${genome_id}_${species_name}.gff"
     /usr/share/augustus/scripts/getAnnoFasta.pl "Prediction/${genome_id}_${species_name}.gff"
 done
 
