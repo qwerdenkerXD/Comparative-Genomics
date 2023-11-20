@@ -2,7 +2,7 @@
 
 !.gitignore
 !Methods
-!Methods/*
+!Methods/*.sh
 !Material
 !Material/._
 !Results

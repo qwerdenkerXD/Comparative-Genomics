@@ -4,7 +4,7 @@ Was tragen wir hier ein?
 
 Jeden Schritt, der Daten einliest und Daten verarbeitet und ein
 (Zwischen)-Ergebnis produziert. Mit allen Parametern, mit der Version des Codes
-(Script), die den Schritt durchgeführt hat, und wo die Ausgabe zu finden ist.
+(Skript), die den Schritt durchgeführt hat, und wo die Ausgabe zu finden ist.
 
 ## Material
 
@@ -27,7 +27,7 @@ Verwandten:
 
 ### Download der Referenz-Genome
 
-Siehe Script `./Methods/download_genomes.sh`
+Siehe Skript `./Methods/download_genomes.sh`
 
 - _S. cerevisiae_
 - _E. gossypii_
@@ -36,10 +36,15 @@ Siehe Script `./Methods/download_genomes.sh`
 - _L. thermotolerans_
 - _L. kluyveri_
 
-Ausführung des Scripts am 20. November 2023
+Ausführung des Skripts am 20. November 2023
 ```sh
 cd Methods
 sbatch download_genomes.sh
 ```
 
 ## Methoden
+Betriebssystem: Ubuntu 22.04.3 LTS
+Tools:
+ - slurm-wlm: 21.08.5
+ - augustus: 3.4.0
+ - conda: 23.3.1
