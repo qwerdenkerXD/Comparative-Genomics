@@ -69,3 +69,10 @@ cd Methods
 sbatch busco.sh
 ```
 Ausführung des Skripts am 20. November 2023
+
+### Erkennen von Transposons mit EDTA
+```sh
+cd Methods
+sbatch detect_transposables.sh
+```
+Ausführung des Skripts am 20. November 2023
