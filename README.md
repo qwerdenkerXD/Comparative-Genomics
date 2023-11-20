@@ -36,8 +36,10 @@ Siehe Script `./Methods/download_genomes.sh`
 - _L. thermotolerans_
 - _L. kluyveri_
 
-Ausführung der Scripte am 24.Oktober:
+Ausführung des Scripts am 20. November 2023
 ```sh
+cd Methods
+sbatch download_genomes.sh
 ```
 
 ## Methoden
