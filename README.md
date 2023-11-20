@@ -44,7 +44,21 @@ sbatch download_genomes.sh
 
 ## Methoden
 Betriebssystem: Ubuntu 22.04.3 LTS
+
 Tools:
  - slurm-wlm: 21.08.5
  - augustus: 3.4.0
  - conda: 23.3.1
+
+### Vorhersage der Gene
+```sh
+cd Methods
+sbatch predict_genes.sh
+```
+Ausführung des Skripts am 20. November 2023
+
+### Vergleich der vorhergesagten Gene mit denen aus den heruntergeladenen Daten
+```sh
+cd Methods
+bash compare_prediction_results.sh
+```
