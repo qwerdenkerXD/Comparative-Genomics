@@ -33,10 +33,10 @@ conda activate busco
 conda info
 
 
-mkdir ../Material/Busco
-for file in ../Material/Prediction/*.aa
+mkdir ../Results/Busco
+for file in ../Results/Prediction/*.aa
 do
-    busco -m proteins -i "$file" -o "../Material/Busco/${file##*/}"
+    busco -m proteins -i "$file" -o "../Results/Busco/${file##*/}"
 done
 
 exit 0

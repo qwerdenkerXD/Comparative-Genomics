@@ -12,8 +12,8 @@ do
     fi
 
     my_prediction=0
-    if [ -f "../../../Prediction/${genome_id}_${species_name}.aa" ]; then
-        my_prediction=$(grep -c "^>" "../../../Prediction/${genome_id}_${species_name}.aa")
+    if [ -f "../../../../Results/Prediction/${genome_id}_${species_name}.aa" ]; then
+        my_prediction=$(grep -c "^>" "../../../../Results/Prediction/${genome_id}_${species_name}.aa")
     fi
 
     echo $species_name:

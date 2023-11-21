@@ -12,7 +12,7 @@
 #SBATCH --error=./logs/%x_%j_slurm.err
 
 cd ../Material
-mkdir Prediction
+mkdir ../Results/Prediction
 
 # match the species name with its best fitting trained species model in augustus
 declare -A species=()
@@ -28,8 +28,8 @@ do
     dir=${dir%*/}  # remove trailing slash
     genome_id=${dir##*/}
     species_name=$(head -1 $dir/$genome_id* | cut -f 2,3 -d " ")
-    augustus --species="${species[$species_name]}" $dir/$genome_id* > "Prediction/${genome_id}_${species_name}.gff"
-    /usr/share/augustus/scripts/getAnnoFasta.pl "Prediction/${genome_id}_${species_name}.gff"
+    augustus --species="${species[$species_name]}" $dir/$genome_id* > "../Results/Prediction/${genome_id}_${species_name}.gff"
+    /usr/share/augustus/scripts/getAnnoFasta.pl "../Results/Prediction/${genome_id}_${species_name}.gff"
 done
 
 # Finish the script

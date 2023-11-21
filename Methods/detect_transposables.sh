@@ -30,14 +30,14 @@ unset __conda_setup
 conda activate EDTA
 
 methods_dir="$(pwd)"
-mkdir ../Material/Detected_Transposons
+mkdir ../Results/Detected_Transposons
 for dir in ../Material/Genomes/ncbi_dataset/data/*/
 do
     dir=${dir%*/}  # remove trailing slash
     genome_id=${dir##*/}
     species_name=$(head -1 $dir/$genome_id* | cut -f 2,3 -d " ")
     
-    out_dir="../Material/Detected_Transposons/$genome_id"
+    out_dir="../Results/Detected_Transposons/$genome_id"
     mkdir "$out_dir"
     file=($dir/$genome_id*)
     cp "${file[0]}" $out_dir
