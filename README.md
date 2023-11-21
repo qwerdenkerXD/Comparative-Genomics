@@ -52,6 +52,7 @@ Tools:
 
 ### Vorhersage der Gene
 ```sh
+# setzt erfolgreich abgeschlossene Ausführung von download_genomes.sh voraus
 cd Methods
 sbatch predict_genes.sh
 ```
@@ -59,12 +60,14 @@ Ausführung des Skripts am 20. November 2023
 
 ### Vergleich der vorhergesagten Gene mit denen aus den heruntergeladenen Daten
 ```sh
+# setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
 cd Methods
-bash compare_prediction_results.sh
+bash compare_prediction_results.sh > ../Results/compare_prediction_results_out.txt
 ```
 
 ### Qualitätscheck mit BUSCO
 ```sh
+# setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
 cd Methods
 sbatch busco.sh
 ```
@@ -72,6 +75,7 @@ Ausführung des Skripts am 20. November 2023
 
 ### Erkennen von Transposons mit EDTA
 ```sh
+# setzt erfolgreich abgeschlossene Ausführung von download_genomes.sh voraus
 cd Methods
 sbatch detect_transposables.sh
 ```
