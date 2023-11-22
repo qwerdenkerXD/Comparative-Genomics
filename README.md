@@ -46,9 +46,14 @@ sbatch download_genomes.sh
 Betriebssystem: Ubuntu 22.04.3 LTS
 
 Tools:
+ - OrthoFinder: [2.5.5](https://github.com/davidemms/OrthoFinder/archive/refs/tags/2.5.5.tar.gz)
  - slurm-wlm: 21.08.5
+ - python3: 3.10.12
  - augustus: 3.4.0
  - conda: 23.3.1
+ - scipy: 1.11.4
+ - numpy: 1.26.2
+ - pip: 22.0.2
 
 ### Vorhersage der Gene
 ```sh
@@ -80,3 +85,12 @@ cd Methods
 sbatch detect_transposables.sh
 ```
 Ausführung des Skripts am 20. November 2023
+
+### Erkennen von Genfamilien mit OrthoFinder
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
+cd Methods
+# das Argument für das Skript ist der Pfad zu 'othofinder.py' vom OrthoFinder tool
+sbatch find_orthologous_genes.sh /media/BioNAS/KOGE_WS_23_24/Methods/OrthoFinder-2.5.5/orthofinder.py
+```
+Ausführung des Skripts am 22. November 2023

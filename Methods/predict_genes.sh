@@ -30,6 +30,7 @@ do
     species_name=$(head -1 $dir/$genome_id* | cut -f 2,3 -d " ")
     augustus --species="${species[$species_name]}" $dir/$genome_id* > "../Results/Prediction/${genome_id}_${species_name}.gff"
     /usr/share/augustus/scripts/getAnnoFasta.pl "../Results/Prediction/${genome_id}_${species_name}.gff"
+    mv "../Results/Prediction/${genome_id}_${species_name}.aa" "../Results/Prediction/${genome_id}_${species_name}.faa"
 done
 
 # Finish the script
