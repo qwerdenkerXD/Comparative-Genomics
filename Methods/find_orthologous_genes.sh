@@ -16,7 +16,7 @@ if [ $1 ] && [ -f $1 ]
 then
     python3 $1 -p logs -f ../Results/Prediction -o ../Results/Orthologous_Genes
 else
-    echo USAGE: $0 path/to/orthofinder.py
+    echo USAGE: $0 path/to/orthofinder.py >&2
 fi
 
 exit 0
