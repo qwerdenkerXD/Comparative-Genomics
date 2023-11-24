@@ -53,7 +53,9 @@ Tools:
  - conda: 23.3.1
  - scipy: 1.11.4
  - numpy: 1.26.2
+ - curl: 7.81.0
  - pip: 22.0.2
+ - tar: 1.34
 
 ### Vorhersage der Gene
 ```sh
