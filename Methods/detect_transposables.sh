@@ -29,7 +29,10 @@ unset __conda_setup
 # activate EDTA conda environment:
 conda activate EDTA
 
-methods_dir="$(pwd)"
+methods_dir="$(dirname "$0")"
+cd "$methods_dir"
+methods_dir=$(pwd)
+
 mkdir ../Results/Detected_Transposons
 for dir in ../Material/Genomes/ncbi_dataset/data/*/
 do
@@ -43,7 +46,8 @@ do
     cp "${file[0]}" $out_dir
     cd $out_dir
     perl /opt/edta/EDTA/EDTA.pl --genome "./${file[0]##*/}"
-    cd $methods_dir
+
+    cd "$methods_dir"
 done
 
 exit 0

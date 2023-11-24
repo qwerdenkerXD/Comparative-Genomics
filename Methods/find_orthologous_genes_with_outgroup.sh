@@ -11,23 +11,25 @@
 #SBATCH --output=./logs/%x_%j_slurm.out
 #SBATCH --error=./logs/%x_%j_slurm.err
 
+methods_dir="$(dirname "$0")"
+
 # takes one argument that is the path to 'orthofinder.py'
 if [ $1 ] && [ -f $1 ]
 then
     # download outgroup
-    curl -H "Accept: application/zip" -o     "../Material/Ecoli.zip"       "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCA_000005845.2/download?include_annotation_type=PROT_FASTA&filename=GCA_000005845.2.zip"
-    mkdir ../Material/Outgroup
-    unzip -o ../Material/Ecoli.zip -d ../Material/Outgroup
-    rm ../Material/Ecoli.zip
+    curl -H "Accept: application/zip" -o     "$methods_dir/../Material/Ecoli.zip"       "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCA_000005845.2/download?include_annotation_type=PROT_FASTA&filename=GCA_000005845.2.zip"
+    mkdir "$methods_dir/../Material/Outgroup"
+    unzip -o "$methods_dir/../Material/Ecoli.zip" -d "$methods_dir/../Material/Outgroup"
+    rm "$methods_dir/../Material/Ecoli.zip"
 
-    tmp=../Results/tmp
+    tmp="$methods_dir/../Results/tmp"
     mkdir $tmp
-    cp ../Results/Prediction/* $tmp
-    cp ../Material/Outgroup/ncbi_dataset/data/GCA_000005845.2/protein.faa $tmp/GCA_000005845.2_E.coli.faa
-    python3 $1 -p logs -f ../Results/tmp -o ../Results/Orthologous_Genes_With_Outgroup
+    cp "$methods_dir/../Results/Prediction/*" $tmp
+    cp "$methods_dir/../Material/Outgroup/ncbi_dataset/data/GCA_000005845.2/protein.faa" $tmp/GCA_000005845.2_E.coli.faa
+    python3 $1 -p logs -f "$methods_dir/../Results/tmp" -o "$methods_dir/../Results/Orthologous_Genes_With_Outgroup"
     rm -r $tmp
 else
-    echo USAGE: $0 path/to/orthofinder.py >&2
+    echo USAGE: \"$0\" \"path/to/orthofinder.py\" >&2
 fi
 
 exit 0

@@ -1,7 +1,7 @@
-root=$(dirname "$0")
-cd $root/../Material/Genomes/ncbi_dataset/data
+methods_dir="$(dirname "$0")"
+cd "$methods_dir/../Material/Genomes/ncbi_dataset/data"
 
-for dir in $root/*/
+for dir in ./*/
 do
     dir=${dir%*/}  # remove trailing slash
     genome_id=${dir##*/}
@@ -13,8 +13,8 @@ do
     fi
 
     my_prediction=0
-    if [ -f "$root/../Results/Prediction/${genome_id}_${species_name}.faa" ]; then
-        my_prediction=$(grep -c "^>" "$root/../Results/Prediction/${genome_id}_${species_name}.faa")
+    if [ -f "$methods_dir/../Results/Prediction/${genome_id}_${species_name}.faa" ]; then
+        my_prediction=$(grep -c "^>" "$methods_dir/../Results/Prediction/${genome_id}_${species_name}.faa")
     fi
 
     echo $species_name:

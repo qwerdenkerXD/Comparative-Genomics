@@ -32,6 +32,8 @@ conda activate busco
 # make sure EDTA env is correctly set and working:
 conda info
 
+methods_dir="$(dirname "$0")"
+cd "$methods_dir"
 
 mkdir ../Results/Busco
 for file in ../Results/Prediction/*.aa
