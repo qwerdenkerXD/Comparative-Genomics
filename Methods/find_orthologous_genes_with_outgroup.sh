@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 # name
-#SBATCH --job-name=find_orthologous_genes
+#SBATCH --job-name=find_orthologous_genes_with_outgroups
 
 # cpu
 #SBATCH --ntasks=40
@@ -18,11 +18,11 @@ then
     curl -H "Accept: application/zip" -o     "../Material/Ecoli.zip"       "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCA_000005845.2/download?include_annotation_type=PROT_FASTA&filename=GCA_000005845.2.zip"
     mkdir ../Material/Outgroup
     unzip -o ../Material/Ecoli.zip -d ../Material/Outgroup
-
+    rm ../Material/Ecoli.zip
 
     tmp=../Results/tmp
     mkdir $tmp
-    cp ../Prediction/* $tmp
+    cp ../Results/Prediction/* $tmp
     cp ../Material/Outgroup/ncbi_dataset/data/GCA_000005845.2/protein.faa $tmp/GCA_000005845.2_E.coli.faa
     python3 $1 -p logs -f ../Results/tmp -o ../Results/Orthologous_Genes_With_Outgroup
     rm -r $tmp
