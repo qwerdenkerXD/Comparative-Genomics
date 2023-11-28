@@ -11,12 +11,10 @@
 #SBATCH --output=./logs/%x_%j_slurm.out
 #SBATCH --error=./logs/%x_%j_slurm.err
 
-methods_dir="$(dirname "$0")"
-
 # takes one argument that is the path to 'orthofinder.py'
 if [ $1 ] && [ -f $1 ]
 then
-    python3 $1 -p logs -f "$methods_dir/../Results/Prediction" -o "$methods_dir/../Results/Orthologous_Genes"
+    python3 $1 -p logs -f "../Results/Prediction" -o "../Results/Orthologous_Genes"
 else
     echo USAGE: \"$0\" \"path/to/orthofinder.py\" >&2
 fi

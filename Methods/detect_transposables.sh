@@ -29,8 +29,6 @@ unset __conda_setup
 # activate EDTA conda environment:
 conda activate EDTA
 
-methods_dir="$(dirname "$0")"
-cd "$methods_dir"
 methods_dir=$(pwd)
 
 mkdir ../Results/Detected_Transposons

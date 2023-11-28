@@ -30,9 +30,6 @@
 # The time command is optional, but it may give you a hint on how long the
 # command worked
 
-methods_dir="$(dirname "$0")"
-cd "$methods_dir"
-
 curl -H "Accept: application/zip" -o     "../Material/S. cerevisiae.zip"       "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000146045.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000146045.2.zip"
 curl -H "Accept: application/zip" -o     "../Material/E. gossypii.zip"         "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000091025.4/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000091025.4.zip"
 curl -H "Accept: application/zip" -o     "../Material/K. lactis.zip"           "https://api.ncbi.nlm.nih.gov/datasets/v2alpha/genome/accession/GCF_000002515.2/download?include_annotation_type=GENOME_FASTA,GENOME_GFF,RNA_FASTA,CDS_FASTA,PROT_FASTA,SEQUENCE_REPORT&filename=GCF_000002515.2.zip"

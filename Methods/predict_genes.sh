@@ -11,9 +11,7 @@
 #SBATCH --output=./logs/%x_%j_slurm.out
 #SBATCH --error=./logs/%x_%j_slurm.err
 
-methods_dir="$(dirname "$0")"
-
-cd "$methods_dir/../Material"
+cd "../Material"
 mkdir ../Results/Prediction
 
 # match the species name with its best fitting trained species model in augustus
