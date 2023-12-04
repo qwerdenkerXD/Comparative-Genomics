@@ -115,7 +115,6 @@ def treeNewick(newick: str, plot, root_loc="left", leafLabels=True, showScale=Tr
             else:
                 plot.text(y, x, label, alpha=alpha, verticalalignment="top", horizontalalignment="center", rotation=90)
 
-    newick = newick.replace(" ", "")
     if newick[-1] != ";":
         raise ValueError("Newick string doesn't end with a semicolon")
     if newick[-2] != ")":
