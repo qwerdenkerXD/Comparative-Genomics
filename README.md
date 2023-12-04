@@ -59,6 +59,7 @@ Tools:
  - R: 4.3.2
    - Rscript: 4.3.2
    - venn: 1.11
+     - admisc: 0.33
 
 ### Vorhersage der Gene
 ```sh
