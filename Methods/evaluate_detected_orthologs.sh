@@ -1,7 +1,7 @@
 echo gene families: $(grep -c "^OG" ../Results/Orthologous_Genes/Results*/Orthogroups/Orthogroups.tsv)
 echo
 
-Rscript Rscript evaluate_detected_orthologs.R ../Results/Orthologous_Genes/Results*/Orthogroups/Orthogroups.tsv > /dev/null
+/usr/bin/Rscript evaluate_detected_orthologs.R ../Results/Orthologous_Genes/Results*/Orthogroups/Orthogroups.tsv > /dev/null
 echo gene family plots written to:
 echo     ../Results/gene_family_sizes.png
 echo     ../Results/gene_families_venn.png

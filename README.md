@@ -51,11 +51,14 @@ Tools:
  - python3: 3.10.12
  - augustus: 3.4.0
  - conda: 23.3.1
- - scipy: 1.11.4
- - numpy: 1.26.2
  - curl: 7.81.0
  - pip: 22.0.2
+   - scipy: 1.11.4
+   - numpy: 1.26.2
  - tar: 1.34
+ - R: 4.3.2
+   - Rscript: 4.3.2
+   - venn: 1.11
 
 ### Vorhersage der Gene
 ```sh
