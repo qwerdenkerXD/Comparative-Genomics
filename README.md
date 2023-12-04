@@ -109,15 +109,16 @@ Ausführung des Skripts am 4. Dezember 2023
 ```sh
 # setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
 cd Methods
-# das Argument für das Skript ist der Pfad zu 'othofinder.py' vom OrthoFinder tool
+# das Argument für das Skript ist der Pfad zu 'orthofinder.py' vom OrthoFinder tool
 sbatch find_orthologous_genes.sh /media/BioNAS/KOGE_WS_23_24/Methods/OrthoFinder-2.5.5/orthofinder.py
 ```
 Ausführung des Skripts am 22. November 2023
+
 #### Mit _Schizosaccharomyces osmophilus_ als Outgroup
 ```sh
 # setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
 cd Methods
-# das Argument für das Skript ist der Pfad zu 'othofinder.py' vom OrthoFinder tool
+# das Argument für das Skript ist der Pfad zu 'orthofinder.py' vom OrthoFinder tool
 sbatch find_orthologous_genes_with_outgroup.sh /media/BioNAS/KOGE_WS_23_24/Methods/OrthoFinder-2.5.5/orthofinder.py
 ```
 Ausführung des Skripts am 28. November 2023
