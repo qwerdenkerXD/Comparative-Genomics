@@ -122,3 +122,11 @@ cd Methods
 sbatch find_orthologous_genes_with_outgroup.sh /media/BioNAS/KOGE_WS_23_24/Methods/OrthoFinder-2.5.5/orthofinder.py
 ```
 Ausführung des Skripts am 28. November 2023
+
+#### Auswerten der OrthoFinder-Ergebnisse
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von find_orthologous_genes.sh und find_orthologous_genes_with_outgroup.sh voraus
+cd Methods
+bash evaluate_detected_orthologs.sh > ../Results/evaluate_detected_orthologs_out.txt
+```
+Ausführung des Skripts am 4. Dezember 2023

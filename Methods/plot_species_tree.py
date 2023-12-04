@@ -7,7 +7,7 @@ def main():
     treeNewick(args[1], subp := plt.subplot())
     xmin, xmax = subp.get_xlim()
     subp.set_xlim([xmin, xmax * 1.5])
-    plt.savefig("../Results/species_tree.png")
+    plt.savefig(args[2])
 
 
 def treeNewick(newick: str, plot, root_loc="left", leafLabels=True, showScale=True):
@@ -165,7 +165,7 @@ def treeNewick(newick: str, plot, root_loc="left", leafLabels=True, showScale=Tr
 
 
 if __name__ == '__main__':
-    if len(args) == 2:
+    if len(args) == 3:
         main()
     else:
-        print("\nUSAGE: python3 %s <NEWICK_STRING>" % args[0])
+        print("\nUSAGE: python3 %s <NEWICK_STRING> <OUT_FILE.png>" % args[0])
