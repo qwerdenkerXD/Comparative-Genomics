@@ -1,0 +1,9 @@
+gene families: 4835
+
+gene family plots written to:
+../Results/gene_family_sizes.png
+../Results/gene_families_venn.png
+
+species trees written to:
+../Results/species_tree.png
+../Results/species_tree_with_outgroup.png

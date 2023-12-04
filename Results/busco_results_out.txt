@@ -1,0 +1,78 @@
+Saccharomyces kluyveri:
+	***** Results: *****
+
+	C:94.5%[S:94.1%,D:0.4%],F:1.0%,M:4.5%,n:2137	   
+	2018	Complete BUSCOs (C)			   
+	2010	Complete and single-copy BUSCOs (S)	   
+	8	Complete and duplicated BUSCOs (D)	   
+	22	Fragmented BUSCOs (F)			   
+	97	Missing BUSCOs (M)			   
+	2137	Total BUSCO groups searched		   
+
+
+    
+Kluyveromyces lactis:
+	***** Results: *****
+
+	C:97.1%[S:96.9%,D:0.2%],F:0.7%,M:2.2%,n:2137	   
+	2074	Complete BUSCOs (C)			   
+	2070	Complete and single-copy BUSCOs (S)	   
+	4	Complete and duplicated BUSCOs (D)	   
+	14	Fragmented BUSCOs (F)			   
+	49	Missing BUSCOs (M)			   
+	2137	Total BUSCO groups searched		   
+
+
+    
+[Candida] glabrata:
+	***** Results: *****
+
+	C:94.8%[S:93.8%,D:1.0%],F:1.0%,M:4.2%,n:2137	   
+	2026	Complete BUSCOs (C)			   
+	2005	Complete and single-copy BUSCOs (S)	   
+	21	Complete and duplicated BUSCOs (D)	   
+	22	Fragmented BUSCOs (F)			   
+	89	Missing BUSCOs (M)			   
+	2137	Total BUSCO groups searched		   
+
+
+    
+Eremothecium gossypii:
+	***** Results: *****
+
+	C:98.2%[S:98.2%,D:0.0%],F:0.2%,M:1.6%,n:2137	   
+	2100	Complete BUSCOs (C)			   
+	2099	Complete and single-copy BUSCOs (S)	   
+	1	Complete and duplicated BUSCOs (D)	   
+	4	Fragmented BUSCOs (F)			   
+	33	Missing BUSCOs (M)			   
+	2137	Total BUSCO groups searched		   
+
+
+    
+Lachancea thermotolerans:
+	***** Results: *****
+
+	C:82.0%[S:81.8%,D:0.2%],F:3.5%,M:14.5%,n:2137	   
+	1752	Complete BUSCOs (C)			   
+	1748	Complete and single-copy BUSCOs (S)	   
+	4	Complete and duplicated BUSCOs (D)	   
+	74	Fragmented BUSCOs (F)			   
+	311	Missing BUSCOs (M)			   
+	2137	Total BUSCO groups searched		   
+
+
+    
+Saccharomyces cerevisiae:
+	***** Results: *****
+
+	C:94.8%[S:92.6%,D:2.2%],F:1.2%,M:4.0%,n:2137	   
+	2025	Complete BUSCOs (C)			   
+	1979	Complete and single-copy BUSCOs (S)	   
+	46	Complete and duplicated BUSCOs (D)	   
+	26	Fragmented BUSCOs (F)			   
+	86	Missing BUSCOs (M)			   
+	2137	Total BUSCO groups searched		   
+
+
+    

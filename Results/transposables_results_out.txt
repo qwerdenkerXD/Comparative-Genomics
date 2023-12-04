@@ -1,0 +1,24 @@
+Saccharomyces kluyveri:
+   detected transposable elements: 33
+   potential elements in prediction: 32
+
+Kluyveromyces lactis:
+   detected transposable elements: 17
+   potential elements in prediction: 17
+
+[Candida] glabrata:
+   detected transposable elements: 30
+   potential elements in prediction: 31
+
+Eremothecium gossypii:
+   detected transposable elements: 26
+   potential elements in prediction: 26
+
+Lachancea thermotolerans:
+   detected transposable elements: 30
+   potential elements in prediction: 30
+
+Saccharomyces cerevisiae:
+   detected transposable elements: 37
+   potential elements in prediction: 71
+

@@ -1,0 +1,24 @@
+Saccharomyces kluyveri:
+   my prediction: 4901
+   reference prediction: 0
+
+Kluyveromyces lactis:
+   my prediction: 4764
+   reference prediction: 5085
+
+[Candida] glabrata:
+   my prediction: 4759
+   reference prediction: 5213
+
+Eremothecium gossypii:
+   my prediction: 4582
+   reference prediction: 4776
+
+Lachancea thermotolerans:
+   my prediction: 4043
+   reference prediction: 5092
+
+Saccharomyces cerevisiae:
+   my prediction: 5153
+   reference prediction: 6014
+
