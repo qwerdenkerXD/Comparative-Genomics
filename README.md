@@ -81,6 +81,14 @@ sbatch busco.sh
 ```
 Ausführung des Skripts am 20. November 2023
 
+#### Auslesen der BUSCO-Ergebnisse
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von busco.sh voraus
+cd Methods
+bash busco_results.sh > ../Results/busco_results_out.txt
+```
+Ausführung des Skripts am 4. Dezember 2023
+
 ### Erkennen von Transposons mit EDTA
 ```sh
 # setzt erfolgreich abgeschlossene Ausführung von download_genomes.sh voraus

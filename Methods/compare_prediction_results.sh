@@ -1,4 +1,4 @@
-methods_dir="$(dirname "$0")"
+methods_dir="$(pwd)"
 cd "$methods_dir/../Material/Genomes/ncbi_dataset/data"
 
 for dir in ./*/
