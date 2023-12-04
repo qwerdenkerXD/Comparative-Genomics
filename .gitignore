@@ -4,6 +4,8 @@
 
 !Methods
 !Methods/*.sh
+!Methods/*.R
+!Methods/*.py
 
 !Methods/logs
 !Methods/logs/._
