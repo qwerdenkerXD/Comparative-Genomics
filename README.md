@@ -97,6 +97,14 @@ sbatch detect_transposables.sh
 ```
 Ausführung des Skripts am 20. November 2023
 
+#### Auswerten der EDTA-Ergebnisse
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von detect_transposables.sh voraus
+cd Methods
+bash transposables_results.sh > ../Results/transposables_results_out.txt
+```
+Ausführung des Skripts am 4. Dezember 2023
+
 ### Erkennen von Genfamilien mit OrthoFinder
 ```sh
 # setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
