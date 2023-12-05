@@ -49,17 +49,26 @@ Tools:
  - OrthoFinder: [2.5.5](https://github.com/davidemms/OrthoFinder/archive/refs/tags/2.5.5.tar.gz)
  - slurm-wlm: 21.08.5
  - python3: 3.10.12
- - augustus: 3.4.0
  - conda: 23.3.1
+   - augustus: 3.4.0
+   - syri: 1.6.5
+   - plotsr: 1.1.3
  - curl: 7.81.0
- - pip: 22.0.2
+ - pip: 22.3.1
    - scipy: 1.11.4
    - numpy: 1.26.2
+   - pysam: 0.22.0
+   - pandas: 2.1.3
+   - Cython: 3.0.6
+   - python-igraph: 0.11.3
+   - psutil: 5.9.6
+   - matplotlib: 3.8.2
  - tar: 1.34
  - R: 4.3.2
    - Rscript: 4.3.2
    - venn: 1.11
      - admisc: 0.33
+ - minimap2: 2.26-r1175
 
 ### Vorhersage der Gene
 ```sh
@@ -134,3 +143,11 @@ cd Methods
 bash evaluate_detected_orthologs.sh > ../Results/evaluate_detected_orthologs_out.txt
 ```
 Ausführung des Skripts am 4. Dezember 2023
+
+### Synthenie-Vergleich mit SyRi
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von download_genomes.sh voraus
+cd Methods
+sbatch analyze_syntheny.sh
+```
+Ausführung des Skripts am 5. Dezember 2023
