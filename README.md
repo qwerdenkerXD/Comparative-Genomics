@@ -62,6 +62,7 @@ Tools:
    - Cython: 3.0.6
    - python-igraph: 0.11.3
    - psutil: 5.9.6
+   - setuptools: 59.6.0
    - matplotlib: 3.8.2
  - tar: 1.34
  - R: 4.3.2
