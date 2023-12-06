@@ -26,14 +26,14 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# activate EDTA conda environment:
+# activate BUSCO conda environment:
 conda activate busco
 
-# make sure EDTA env is correctly set and working:
+# make sure BUSCO env is correctly set and working:
 conda info
 
 mkdir ../Results/Busco
-for file in ../Results/Prediction/*.aa
+for file in ../Results/Prediction/*.faa
 do
     busco -m proteins -i "$file" -o "../Results/Busco/${file##*/}"
 done
