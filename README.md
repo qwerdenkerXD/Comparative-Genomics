@@ -151,4 +151,4 @@ Ausführung des Skripts am 4. Dezember 2023
 cd Methods
 sbatch analyze_syntheny.sh
 ```
-Ausführung des Skripts am 5. Dezember 2023
+Ausführung des Skripts am 7. Dezember 2023

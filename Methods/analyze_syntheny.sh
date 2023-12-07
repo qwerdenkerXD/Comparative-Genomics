@@ -14,7 +14,7 @@
 out_path=../Results/Syntheny
 mkdir $out_path
 
-plot="plotsr -H 8 -W 5 -o ../Results/syntheny.png --genomes $out_path/genomes.txt"
+plot="plotsr --cfg plotsr.cfg -H 5 -W 5 -o ../Results/syntheny.png --genomes $out_path/genomes.txt"
 
 echo "" > $out_path/genomes.txt
 
@@ -100,5 +100,7 @@ echo "
 $plot"
 
 eval $plot
+
+mv plotsr.log logs
 
 exit 0
