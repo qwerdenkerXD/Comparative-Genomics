@@ -76,6 +76,7 @@ Tools:
 # setzt erfolgreich abgeschlossene Ausführung von download_genomes.sh voraus
 cd Methods
 sbatch predict_genes.sh
+# predicted genes in ../Results/Prediction
 ```
 Ausführung des Skripts am 20. November 2023
 
@@ -92,6 +93,7 @@ Ausführung des Skripts am 21. November 2023
 # setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
 cd Methods
 sbatch busco.sh
+# BUSCO output in ../Results/Busco
 ```
 Ausführung des Skripts am 20. November 2023
 
@@ -108,6 +110,7 @@ Ausführung des Skripts am 4. Dezember 2023
 # setzt erfolgreich abgeschlossene Ausführung von download_genomes.sh voraus
 cd Methods
 sbatch detect_transposables.sh
+# EDTA output in ../Results/Detected_Transposons
 ```
 Ausführung des Skripts am 20. November 2023
 
@@ -125,6 +128,7 @@ Ausführung des Skripts am 4. Dezember 2023
 cd Methods
 # das Argument für das Skript ist der Pfad zu 'orthofinder.py' vom OrthoFinder tool
 sbatch find_orthologous_genes.sh /media/BioNAS/KOGE_WS_23_24/Methods/OrthoFinder-2.5.5/orthofinder.py
+# OrthoFinder results in ../Results/Orthologous_Genes
 ```
 Ausführung des Skripts am 22. November 2023
 
@@ -134,6 +138,7 @@ Ausführung des Skripts am 22. November 2023
 cd Methods
 # das Argument für das Skript ist der Pfad zu 'orthofinder.py' vom OrthoFinder tool
 sbatch find_orthologous_genes_with_outgroup.sh /media/BioNAS/KOGE_WS_23_24/Methods/OrthoFinder-2.5.5/orthofinder.py
+# OrthoFinder results in ../Results/Orthologous_Genes_With_Outgroup
 ```
 Ausführung des Skripts am 28. November 2023
 
@@ -145,10 +150,11 @@ bash evaluate_detected_orthologs.sh > ../Results/evaluate_detected_orthologs_out
 ```
 Ausführung des Skripts am 4. Dezember 2023
 
-### Synthenie-Vergleich mit SyRi
+### Synthenie-Analyse mit SyRi
 ```sh
 # setzt erfolgreich abgeschlossene Ausführung von download_genomes.sh voraus
 cd Methods
-sbatch analyze_syntheny.sh
+sbatch analyze_syntheny_syri.sh
+# SyRi results in ../Results/Syntheny_SyRi with corresponding plot ../Results/syntheny_syri.png
 ```
-Ausführung des Skripts am 7. Dezember 2023
+Ausführung des Skripts am 10. Dezember 2023

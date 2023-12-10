@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 # name
-#SBATCH --job-name=analyze_syntheny
+#SBATCH --job-name=analyze_syntheny_syri
 
 # cpu
 #SBATCH --ntasks=10
@@ -11,10 +11,10 @@
 #SBATCH --output=./logs/%x_%j_slurm.out
 #SBATCH --error=./logs/%x_%j_slurm.err
 
-out_path=../Results/Syntheny
+out_path=../Results/Syntheny_SyRi
 mkdir $out_path
 
-plot="plotsr --cfg plotsr.cfg -H 5 -W 5 -o ../Results/syntheny.png --genomes $out_path/genomes.txt"
+plot="plotsr --cfg plotsr.cfg -H 5 -W 5 -o ../Results/syntheny_syri.png --genomes $out_path/genomes.txt"
 
 echo "" > $out_path/genomes.txt
 
