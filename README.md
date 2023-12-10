@@ -75,6 +75,11 @@ Tools:
    - Rscript: 4.3.2
    - venn: 1.11
      - admisc: 0.33
+   - RColorBrewer: 1.1-3
+   - wordcloud: 2.6
+   - wordcloud2: 0.2.1
+   - htmlwidgets: 1.6.3
+   - webshot: 0.5.5
  - minimap2: 2.26-r1175
 
 ### Vorhersage der Gene
@@ -179,5 +184,22 @@ Ausführung des Skripts am 10. Dezember 2023
 # setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
 cd Methods
 sbatch annotate_proteomes.sh
+```
+Ausführung des Skripts am 10. Dezember 2023
+
+### Generieren verständlicher Sequenzbeschreibungen mit prot-scriber
+#### Vorbereiten der TrEMBL Datenbank
+```sh
+# setzt voraus, dass Material/Diamond/uniprot_trembl.fasta existiert (database release 2023-11-08)
+cd Methods
+sbatch diamond_makedb.sh
+```
+Ausführung des Skripts am 10. Dezember 2023
+
+#### Generierung der Beschreibungen
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
+cd Methods
+sbatch prot_scriber.sh
 ```
 Ausführung des Skripts am 10. Dezember 2023
