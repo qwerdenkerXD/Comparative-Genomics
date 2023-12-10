@@ -46,13 +46,19 @@ sbatch download_genomes.sh
 Betriebssystem: Ubuntu 22.04.3 LTS
 
 Tools:
+ - prot-scriber: [0.1.4](https://github.com/usadellab/prot-scriber/releases/tag/v0.1.4)
+ - HMMER: 3.3.1
+ - openjdk: 18.0.2-ea
+ - DAGchainer: [dbf9f2f](https://github.com/kullrich/dagchainer/commit/dbf9f2face659794ee5ceaa560356f81c137fef9)
  - OrthoFinder: [2.5.5](https://github.com/davidemms/OrthoFinder/archive/refs/tags/2.5.5.tar.gz)
  - slurm-wlm: 21.08.5
+ - perl: 5.34.0
+ - blastp: 2.14.0
  - python3: 3.10.12
  - conda: 23.3.1
-   - augustus: 3.4.0
-   - syri: 1.6.5
-   - plotsr: 1.1.3
+ - augustus: 3.4.0
+ - syri: 1.6.5
+ - plotsr: 1.1.3
  - curl: 7.81.0
  - pip: 22.3.1
    - scipy: 1.11.4
@@ -156,5 +162,22 @@ Ausführung des Skripts am 4. Dezember 2023
 cd Methods
 sbatch analyze_syntheny_syri.sh
 # SyRi results in ../Results/Syntheny_SyRi with corresponding plot ../Results/syntheny_syri.png
+```
+Ausführung des Skripts am 10. Dezember 2023
+
+### Annotieren der Proteome mit HMMER
+#### Vorbereiten der Pfam Datenbank
+```sh
+# setzt voraus, dass Material/HMMER/Pfam-A.hmm existiert
+cd Methods
+sbatch hmmpress.sh
+```
+Ausführung des Skripts am 10. Dezember 2023
+
+#### Annotation
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
+cd Methods
+sbatch annotate_proteomes.sh
 ```
 Ausführung des Skripts am 10. Dezember 2023
