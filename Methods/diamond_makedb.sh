@@ -1,7 +1,7 @@
 #!/bin/bash -l
 
 # name
-#SBATCH --job-name=hmmpress
+#SBATCH --job-name=diamond_makedb
 
 # cpu
 #SBATCH --ntasks=1

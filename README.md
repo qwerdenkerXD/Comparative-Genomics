@@ -162,7 +162,8 @@ bash evaluate_detected_orthologs.sh > ../Results/evaluate_detected_orthologs_out
 ```
 Ausführung des Skripts am 4. Dezember 2023
 
-### Synthenie-Analyse mit SyRi
+### Synthenie-Analyse
+#### SyRi
 ```sh
 # setzt erfolgreich abgeschlossene Ausführung von download_genomes.sh voraus
 cd Methods
@@ -170,6 +171,16 @@ sbatch analyze_syntheny_syri.sh
 # SyRi results in ../Results/Syntheny_SyRi with corresponding plot ../Results/syntheny_syri.png
 ```
 Ausführung des Skripts am 10. Dezember 2023
+
+#### DAGchainer
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von download_genomes.sh voraus
+cd Methods
+sbatch analyze_syntheny_dagchainer.sh
+# DAGchainer results in ../Results/Syntheny_DAGchainer
+# Java XY Plotter geht nicht wegen SSH
+```
+Ausführung des Skripts am 11. Dezember 2023
 
 ### Annotieren der Proteome mit HMMER
 #### Vorbereiten der Pfam Datenbank
@@ -185,6 +196,7 @@ Ausführung des Skripts am 10. Dezember 2023
 # setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
 cd Methods
 sbatch annotate_proteomes.sh
+# Ergebnisse in ../Results/Annotated_Proteomes
 ```
 Ausführung des Skripts am 10. Dezember 2023
 
@@ -202,6 +214,7 @@ Ausführung des Skripts am 10. Dezember 2023
 # setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh und find_orthologous_genes.sh voraus
 cd Methods
 sbatch prot_scriber.sh
+# Ergebnisse in ../Results/Protscriber
 ```
 Ausführung des Skripts am 11. Dezember 2023
 
@@ -210,5 +223,6 @@ Ausführung des Skripts am 11. Dezember 2023
 # setzt erfolgreich abgeschlossene Ausführung von prot_scriber.sh
 cd Methods
 sbatch evaluate_prot_scriber.sh
+# Plots in ../Results/*_word_cloud_type_*
 ```
 Ausführung des Skripts am 11. Dezember 2023
