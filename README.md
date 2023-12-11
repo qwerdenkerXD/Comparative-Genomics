@@ -200,6 +200,15 @@ sbatch annotate_proteomes.sh
 ```
 Ausführung des Skripts am 10. Dezember 2023
 
+#### Auswertung der Annotationen
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von annotate_proteomes.sh voraus
+cd Methods
+sbatch evaluate_annotated_proteomes.sh
+# Ergebnisse in ../Results/evaluate_annotated_proteomes_out.txt
+```
+Ausführung des Skripts am 11. Dezember 2023
+
 ### Generieren verständlicher Sequenzbeschreibungen mit prot-scriber
 #### Vorbereiten der TrEMBL Datenbank
 ```sh
