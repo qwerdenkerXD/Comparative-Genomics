@@ -26,9 +26,9 @@ do
     seq_families="$out_path/${filebase}.seqfamilies.tsv"
     gene_families=../Results/Orthologous_Genes/Results*/Orthogroups/Orthogroups.tsv
     declare -i species_col=1
-    species_col+=$(head -1 $gene_families | sed "s/${filebase}.*//" | grep -cP "\t")
+    species_col+=$(head -1 $gene_families | sed "s/${filebase}.*//" | grep -oP "\t" | wc -l)
 
-    cut -d $'\t' -f 1,$species_col $gene_families | sed -e "s/ //g" -e "/\t$/d" | tail -n +2 > "$seq_families"
+    cut -d $'\t' -f 1,$species_col $gene_families | sed -e "s/ //g" | grep -P "\w+\t\w+" | tail -n +2 > "$seq_families"
 
     prot_out="$out_path/${filebase}.protscriber.tsv"
     prot-scriber -n 10 -f "$seq_families" -s "$blast_out" -o "$prot_out"
