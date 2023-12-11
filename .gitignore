@@ -18,5 +18,6 @@
 !Results/gene_fam*.png
 !Results/species_tree*.png
 !Results/syntheny*.png
+!Results/protscriber.result*
 
 !README.md

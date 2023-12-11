@@ -18,7 +18,7 @@ all_descriptions="$out_path/all_descriptions.tsv"
 
 for file in ../Results/Prediction/*.faa
 do
-    filebase="$(basename ${file%.*})"
+    filebase="$(basename "${file%.*}")"
 
     blast_out="$out_path/${filebase}.blast.tsv"
     diamond blastp --threads 10 --db /media/BioNAS/UniProtKB/202312/uniprot_trembl.fasta --query "$file" --out "$blast_out" --outfmt 6 qseqid sseqid stitle
