@@ -46,6 +46,7 @@ sbatch download_genomes.sh
 Betriebssystem: Ubuntu 22.04.3 LTS
 
 Tools:
+ - phantomjs: 2.1.1
  - prot-scriber: [0.1.4](https://github.com/usadellab/prot-scriber/releases/tag/v0.1.4)
  - HMMER: 3.3.1
  - openjdk: 18.0.2-ea
@@ -198,8 +199,16 @@ Ausführung des Skripts am 10. Dezember 2023
 
 #### Generierung der Beschreibungen
 ```sh
-# setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh voraus
+# setzt erfolgreich abgeschlossene Ausführung von predict_genes.sh und find_orthologous_genes.sh voraus
 cd Methods
 sbatch prot_scriber.sh
 ```
-Ausführung des Skripts am 10. Dezember 2023
+Ausführung des Skripts am 11. Dezember 2023
+
+#### Generieren der Ergebnisplots
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von prot_scriber.sh
+cd Methods
+sbatch evaluate_prot_scriber.sh
+```
+Ausführung des Skripts am 11. Dezember 2023
