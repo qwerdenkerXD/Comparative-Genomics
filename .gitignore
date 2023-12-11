@@ -19,5 +19,7 @@
 !Results/species_tree*.png
 !Results/syntheny*.png
 !Results/protscriber.result*
+!Results/protscriber.result*/*
+!Results/protscriber.result*/*/*
 
 !README.md
