@@ -178,7 +178,7 @@ Ausführung des Skripts am 10. Dezember 2023
 cd Methods
 sbatch analyze_syntheny_dagchainer.sh
 # DAGchainer results in ../Results/Syntheny_DAGchainer
-# Java XY Plotter geht nicht wegen SSH
+# wenn ssh -> ssh mit -X Option, da Java_XY_plotter X11 DISPLAY braucht
 ```
 Ausführung des Skripts am 11. Dezember 2023
 

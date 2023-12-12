@@ -38,4 +38,5 @@ perl "$dagchainer/accessory_scripts/filter_repetitive_matches.pl" 5 < "$blast_re
 
 perl "$dagchainer/run_DAG_chainer.pl" -i "$dagchainer_in" -Z 12 -D 10 -g 1 -A 5
 
-DISPLAY=:0.0 perl "$dagchainer/Java_XY_plotter/run_XYplot.pl" "$dagchainer_in" "${dagchainer_in}.aligncoords"
+# set max JVM memory to 8GB and modify libpath
+sed "s/Xmx300M/Xmx8192M/; s/cp  \$libPath/cp  ..\/..\/Methods\/dagchainer\/Java_XY_plotter\/lib/" "$dagchainer/Java_XY_plotter/run_XYplot.pl" | perl - "$dagchainer_in" "${dagchainer_in}.aligncoords" > /dev/null
