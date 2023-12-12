@@ -57,7 +57,7 @@ words.df <- data.frame(word = unq.wrds, freq = as.numeric(mclapply(unq.wrds,
 
 
 #' Generate word-cloud:
-pdf(paste0(output.files.name, "_word_cloud_type_one.pdf"))
+png(paste0(output.files.name, "_word_cloud_type_one.png"), 480, 480)
 wordcloud(words = words.df$word, freq = words.df$freq,
     min.freq = quantile(words.df$freq, 1/3), max.words = 200,
     random.order = FALSE, rot.per = 0.35, colors = brewer.pal(8,
@@ -72,7 +72,7 @@ wrd.cld.2 <- wordcloud2(data = words.df, size = 1.6,
 html.out <- paste0(output.files.name, "_word_cloud_type_two.html")
 saveWidget(wrd.cld.2, html.out, selfcontained = F)
 #' and as PDF:
-webshot(html.out, paste0(output.files.name, "_word_cloud_type_two.pdf"),
+webshot(html.out, paste0(output.files.name, "_word_cloud_type_two.png"),
     delay = 5, vwidth = 480, vheight = 480)
 
 
