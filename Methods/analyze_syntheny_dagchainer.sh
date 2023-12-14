@@ -4,9 +4,9 @@
 #SBATCH --job-name=analyze_syntheny_dagchainer
 
 # cpu
-#SBATCH --ntasks=80
+#SBATCH --ntasks=10
 
-#SBATCH --mem-per-cpu=1GB
+#SBATCH --mem-per-cpu=10GB
 
 #SBATCH --output=./logs/%x_%j_slurm.out
 #SBATCH --error=./logs/%x_%j_slurm.err
@@ -27,7 +27,7 @@ diamond makedb --db "$query"
 
 blast_result="all_vs_all.match_file"
 
-diamond blastp --threads 80 --query "$query" --db "$query" --out "$blast_result" --outfmt 6 qseqid qtitle qstart qend sseqid stitle sstart send evalue
+diamond blastp --threads 10 --query "$query" --db "$query" --out "$blast_result" --outfmt 6 qtitle qseqid qstart qend stitle sseqid sstart send evalue
 
 dagchainer=../../Methods/dagchainer
 dagchainer_in="${blast_result}.filtered"
