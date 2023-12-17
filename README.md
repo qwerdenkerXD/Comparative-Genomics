@@ -180,7 +180,9 @@ sbatch analyze_syntheny_dagchainer.sh
 # DAGchainer results in ../Results/Syntheny_DAGchainer
 
 # Betrachten der Ergebnisse: wenn ssh -> ssh mit -X Option, da Java_XY_plotter X11 DISPLAY braucht
-bash plot_syntheny.sh
+bash plot_syntheny.sh  # zeigt alle plots
+bash plot_syntheny.sh "Saccharomyces cerevisiae"  # zeigt alle plots mit Synthenie zu Saccharomyces cerevisiae
+bash plot_syntheny.sh cerev kluy # zeigt alle plots mit Synthenie zwischen Saccharomyces cerevisiae und Saccharomyces kluyveri
 ```
 Ausführung des Skripts am 17. Dezember 2023
 
