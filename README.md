@@ -178,9 +178,11 @@ Ausführung des Skripts am 10. Dezember 2023
 cd Methods
 sbatch analyze_syntheny_dagchainer.sh
 # DAGchainer results in ../Results/Syntheny_DAGchainer
-# wenn ssh -> ssh mit -X Option, da Java_XY_plotter X11 DISPLAY braucht
+
+# Betrachten der Ergebnisse: wenn ssh -> ssh mit -X Option, da Java_XY_plotter X11 DISPLAY braucht
+bash plot_syntheny.sh
 ```
-Ausführung des Skripts am 11. Dezember 2023
+Ausführung des Skripts am 17. Dezember 2023
 
 ### Annotieren der Proteome mit HMMER
 #### Vorbereiten der Pfam Datenbank

@@ -1,0 +1,1 @@
+perl dagchainer/Java_XY_plotter/run_XYplot.pl "../Results/Syntheny_DAGchainer/all_vs_all.match_file.filtered.syntheny" "../Results/Syntheny_DAGchainer/all_vs_all.match_file.filtered.aligncoords" > /dev/null
