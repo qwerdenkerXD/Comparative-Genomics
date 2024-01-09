@@ -233,9 +233,17 @@ Ausführung des Skripts am 11. Dezember 2023
 
 #### Generieren der Ergebnisplots
 ```sh
-# setzt erfolgreich abgeschlossene Ausführung von prot_scriber.sh
+# setzt erfolgreich abgeschlossene Ausführung von prot_scriber.sh voraus
 cd Methods
 sbatch evaluate_prot_scriber.sh
 # Plots in ../Results/*_word_cloud_type_*
 ```
 Ausführung des Skripts am 11. Dezember 2023
+
+### Identifizieren kontrahierter und expandierter Genfamilien mit CAFE5
+```sh
+# setzt erfolgreich abgeschlossene Ausführung von find_orthologous_genes.sh voraus
+cd Methods
+sbatch cafe.sh
+```
+Ausführung des Skripts am 9. Januar 2024
